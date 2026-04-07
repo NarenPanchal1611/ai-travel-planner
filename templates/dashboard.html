@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #36d1dc, #5b86e5);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: gray;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .plan-btn {
+            background: #36d1dc;
+            color: white;
+        }
+
+        .logout-btn {
+            background: #ff4d4d;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .plan-btn:hover {
+            background: #2bbac3;
+        }
+
+        .logout-btn:hover {
+            background: #e60000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Welcome, {{ username }} 👋</h2>
+    <p>Ready to plan your next trip?</p>
+
+    <a href="/planner">
+        <button class="btn plan-btn">✈️ Plan a Trip</button>
+    </a>
+
+    <a href="/logout">
+        <button class="btn logout-btn">🚪 Logout</button>
+    </a>
+</div>
+
+</body>
+</html>

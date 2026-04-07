@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Travel Plan</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            width: 420px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .info {
+            color: gray;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: #f1f1f1;
+            margin: 8px 0;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 10px 5px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .again {
+            background: #28a745;
+        }
+
+        .dashboard {
+            background: #ff4d4d;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .again:hover {
+            background: #218838;
+        }
+
+        .dashboard:hover {
+            background: #e60000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>🌍 Your Travel Plan</h2>
+
+    <p class="info"><b>Budget:</b> ₹{{ budget }}</p>
+    <p class="info"><b>Days:</b> {{ days }}</p>
+
+    <!-- Recommended Places -->
+    <h3>✈️ Recommended Places</h3>
+    <ul>
+        {% for place in places %}
+            <li>{{ place }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Buttons -->
+    <a href="/planner" class="btn again">🔁 Plan Again</a>
+    <a href="/dashboard" class="btn dashboard">🏠 Dashboard</a>
+</div>
+
+</body>
+</html>
